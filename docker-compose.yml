@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  sec.proxy:
+    image: m0rdovorot/sec.proxy:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./certs/ca.crt:/certs/ca.crt
+      - ./certs/ca.key:/certs/ca.key
+      - ./certs/cert.key:/certs/cert.key
+      - ./script.sh:/script.sh
